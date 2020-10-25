@@ -6,14 +6,20 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= htmlWebpackPlugin.options.title
     body
-        .app
-            p
-                strong Precios:
-                span#price
-            p
-                strong Precios oferta:
-                span#offer
-            p
-                strong Precios Final:
-                span#final-price
-            button#make-offer.button Regatear
+        .wrapper
+            h1 Quemador de calorias
+            p.results#results
+            button.burn#burn go
+
+        //- ShorthandPropertyName
+        //- .app
+        //-     p
+        //-         strong Precios:
+        //-         span#price
+        //-     p
+        //-         strong Precios oferta:
+        //-         span#offer
+        //-     p
+        //-         strong Precios Final:
+        //-         span#final-price
+        //-     button#make-offer.button Regatear

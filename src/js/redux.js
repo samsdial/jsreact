@@ -1,4 +1,6 @@
 
+// Redux Vanilla js
+
 const createStore = (reducer, initialState) => {
     let state = initialState
     let updater = () => {}
@@ -22,15 +24,10 @@ const createStore = (reducer, initialState) => {
 }
 
 const reducer = (state, action) => {
-    switch(action.type){
-        case 'BURN':
-            return state + 1.423
-        default:
-            return state
-    }
+    return action
 }
 
-const store = createStore(reducer, 0)
+const store = createStore(reducer, 'estado inicial')
 //store.dispatch()
 //store.getState()
 //store.subscribe()
@@ -38,15 +35,6 @@ const store = createStore(reducer, 0)
 
 store.subscribe(() => {
     console.log('Ha cambiado algo en el store', store.getState())
-    window.results.textContent = `Haz quemado ${store.getState()} Calorias`
 })
-
-
-const burn = () => {
-    store.dispatch({
-        type: 'BURN',
-        payload: 1.42,
-    })
-}
-
-window.burn.addEventListener('click', burn)
+store.dispatch('voy a cambiar algo @sergio')
+store.dispatch('voy otra vez')
